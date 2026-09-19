@@ -15,13 +15,14 @@
 - **Entrega revisável:** projeto roda com `npm run dev`; build de produção passa.
 - **Fora de escopo:** qualquer estilo ou conteúdo visual.
 
-### Task 2 — Curadoria e otimização das imagens 🔲
+### Task 2 — Curadoria e otimização das imagens ✅
 - **Dep:** nenhuma (pode rodar em paralelo com a Task 1)
 - **Escopo:** revisar os 41 arquivos de `public/portifolio-casamento-jessica-renan/`, selecionar/curar por categoria (floral, bolo, mesa de doces, detalhes, ambiente), renomear semanticamente, converter para formato moderno e registrar dimensões. Originais ficam fora do bundle. Sugestão: corrigir o nome da pasta para `portfolio-` (sem "i") ao migrar para `public/images/`.
 - **Entrega revisável:** `public/images/` com nomes semânticos + planilha/objeto de inventário (src, alt sugerido, categoria, width, height).
 - **Ponto de decisão:** quais 6–8 fotos viram destaque na home; qual vira capa do hero. **Requer aprovação do responsável.**
+- **Seleção aprovada:** `ambiente-mesa-bolo-luzes-04` como hero; os oito destaques da home estão em `content/portfolio-images.ts`.
 
-### Task 3 — Tokens e base visual 🔲
+### Task 3 — Tokens e base visual ✅
 - **Dep:** Task 1 · requer aprovação da §11 de `design-direction.md`
 - **Escopo:** configurar tokens de cor, tipografia (Playfair + Lato via `next/font`), escala de espaçamento e classes utilitárias conforme `design-direction.md`. Criar `content/site.ts` com dados de marca/contato.
 - **Entrega revisável:** página de preview interna (ou home em branco) exibindo todos os tokens aplicados — cores, escala tipográfica, botões, foco visível.

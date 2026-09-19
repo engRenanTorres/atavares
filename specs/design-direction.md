@@ -26,7 +26,7 @@ Cores oficiais extraídas do logo, alinhadas com as fotos do portfólio (vinho d
 
 **Regras de contraste:**
 - Texto sobre `cream`: usar `body` ou `wine` — nunca `terracotta` em texto pequeno (falha WCAG AA).
-- Botões primários: fundo `terracotta`, texto `cream`; hover escurece para `wine`.
+- Botões primários: fundo `terracotta`, texto `on-terracotta` (`#0E0B0A`) para contraste AA; hover escurece para `wine` com texto `cream`. O `cream` sobre `terracotta` tem contraste de 3,96:1 e não atende a texto normal.
 - Seções escuras alternam com claras para ritmo editorial; nunca duas escuras seguidas.
 
 ## 3. Tipografia
@@ -95,6 +95,6 @@ Antes de codar a Task 3 (base visual), confirmar:
 
 - [x] Paleta definida — cores oficiais do logo (§2)
 - [x] Logo oficial entregue (`public/logo-az-tavares.png` e `.svg`)
-- [ ] Acento principal: `terracotta` nos botões (proposta atual) vs. `wine`
-- [ ] Par tipográfico: Playfair + Lato **ou** Cormorant + Lato
-- [ ] Ritmo claro/escuro alternado nas seções
+- [x] Acento principal: `terracotta` nos botões
+- [x] Par tipográfico: Playfair Display + Lato
+- [x] Ritmo claro/escuro alternado nas seções
