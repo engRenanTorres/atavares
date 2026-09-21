@@ -8,7 +8,8 @@ export type PortfolioEvent = {
   slug: string;
   title: string;
   summary: string;
-  coverImage: PortfolioImageInventoryItem;
+  status: "publicado" | "em-breve";
+  coverImage?: PortfolioImageInventoryItem;
   images: readonly PortfolioImageInventoryItem[];
 };
 
@@ -26,7 +27,16 @@ export const portfolioEvents = [
     title: "Casamento Jéssica e Renan",
     summary:
       "Uma celebração em tons quentes, onde flores, doces, velas e luzes criaram uma atmosfera acolhedora para celebrar o encontro do casal.",
+    status: "publicado",
     coverImage,
     images: casamentoJessicaRenanImages,
+  },
+  {
+    slug: "casamento-monique-e-leo",
+    title: "Casamento Monique e Leo",
+    summary:
+      "Novas histórias em preparação. Em breve, este casamento será apresentado aqui com a mesma curadoria de imagens.",
+    status: "em-breve",
+    images: [],
   },
 ] as const satisfies readonly PortfolioEvent[];
