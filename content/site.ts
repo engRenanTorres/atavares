@@ -19,13 +19,55 @@ export const site = {
     portfolio: "Conheça o portfólio",
   },
   services: [
-    "Decoração completa",
-    "Decoração floral",
-    "Mesa de doces",
-    "Locação",
-    "Cerimônia",
-    "Aniversários",
-    "Eventos corporativos",
+    {
+      title: "Decoração completa",
+      description:
+        "Composição visual pensada para dar unidade à celebração.",
+    },
+    {
+      title: "Decoração floral",
+      description: "Flores e folhagens que traduzem a atmosfera do evento.",
+    },
+    {
+      title: "Mesa de doces",
+      description: "Detalhes que tornam a mesa um ponto alto da recepção.",
+    },
+    {
+      title: "Locação",
+      description: "Peças selecionadas para completar cada cenário.",
+    },
+    {
+      title: "Cerimônia",
+      description: "Um ambiente especial para o início de uma nova história.",
+    },
+    {
+      title: "Aniversários",
+      description: "Celebrações autorais para marcar momentos importantes.",
+    },
+    {
+      title: "Eventos corporativos",
+      description: "Ambientações cuidadosas para encontros profissionais.",
+    },
+  ],
+  process: [
+    {
+      step: "01",
+      title: "Conte sua ideia",
+      description:
+        "Compartilhe a ocasião, as referências e tudo o que imagina para a celebração.",
+    },
+    {
+      step: "02",
+      title: "Receba uma proposta personalizada",
+      description:
+        "Transformamos suas referências em uma proposta pensada para o seu evento.",
+    },
+    {
+      step: "03",
+      title: "Viva o seu grande dia",
+      description:
+        "Cuidamos da montagem para que você possa aproveitar cada momento.",
+    },
   ],
   faqs: [
     {
@@ -55,4 +97,3 @@ Local/região: {localOuNaoInformado}
 Convidados: {convidadosOuNaoInformado}
 Detalhes: {detalhesOuNaoInformados}`,
 } as const;
-

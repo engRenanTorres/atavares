@@ -35,12 +35,12 @@
 - **Escopo:** logo oficial SVG no header (testar contraste sobre fundos escuros; se o vinho sumir sobre `ink`, aplicar variante ou fundo `cream` na barra), menu desktop/mobile acessível, CTA "Solicite um orçamento" (ainda sem modal — link de fallback para wa.me), rodapé com Instagram e política.
 - **Entrega revisável:** navegação completa funcional em desktop e mobile, com foco por teclado.
 
-### Task 5 — Hero + seção de apresentação 🔶
+### Task 5 — Hero + seção de apresentação ✅
 - **Dep:** Tasks 2 e 4
 - **Escopo:** hero com foto de impacto aprovada, frase de valor, overline "Niterói e região", CTA; bloco institucional com texto pendente sinalizado.
 - **Entrega revisável:** primeira dobra completa da home.
 
-### Task 6 — Serviços + Processo 🔲
+### Task 6 — Serviços + Processo 🔶
 - **Dep:** Task 4
 - **Escopo:** cards dos 7 serviços com ícones Lucide; seção de processo em 3 etapas.
 - **Entrega revisável:** duas seções completas na home.

@@ -239,6 +239,101 @@ a[href] {
   font-style: italic;
 }
 
+.services {
+  background: var(--brand-forest);
+  color: color-mix(in srgb, var(--surface-cream) 85%, var(--accent-gold));
+}
+
+.services__heading {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.services__eyebrow {
+  color: var(--accent-gold);
+}
+
+.services__title {
+  margin-top: var(--space-3);
+  color: var(--surface-cream);
+}
+
+.services__intro {
+  max-width: 32rem;
+  margin: 0;
+}
+
+.services__grid {
+  display: grid;
+  gap: 1px;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+  background: color-mix(in srgb, var(--surface-cream) 32%, transparent);
+}
+
+.service-card {
+  min-height: 14rem;
+  background: var(--brand-forest);
+  padding: var(--space-4);
+}
+
+.service-card__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--accent-gold);
+  stroke-width: 1.5;
+}
+
+.service-card__title {
+  margin-top: var(--space-4);
+  color: var(--surface-cream);
+}
+
+.service-card p {
+  margin: var(--space-2) 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.process {
+  background: var(--surface-cream);
+}
+
+.process__heading {
+  max-width: 42rem;
+}
+
+.process__steps {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process__step {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: var(--space-2);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-3);
+}
+
+.process__number {
+  color: var(--brand-terracotta);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.process__step p {
+  max-width: 25rem;
+  margin: var(--space-2) 0 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
 .skip-link {
   position: fixed;
   z-index: 20;
@@ -438,6 +533,30 @@ a[href] {
   .introduction__grid {
     grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
     gap: clamp(4rem, 10vw, 9rem);
+  }
+
+  .services__heading {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.7fr);
+    align-items: end;
+    gap: clamp(4rem, 10vw, 9rem);
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service-card {
+    min-height: 15rem;
+  }
+
+  .process__steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .process__step {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
 
   .site-header__inner {

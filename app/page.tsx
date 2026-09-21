@@ -1,7 +1,26 @@
 import Image from "next/image";
+import {
+  Armchair,
+  BriefcaseBusiness,
+  CakeSlice,
+  Flower2,
+  Heart,
+  PartyPopper,
+  type LucideIcon,
+} from "lucide-react";
 
 import { heroImageId, casamentoJessicaRenanImages } from "@/content/portfolio-images";
 import { site } from "@/content/site";
+
+const serviceIcons = {
+  "Decoração completa": Flower2,
+  "Decoração floral": Flower2,
+  "Mesa de doces": CakeSlice,
+  Locação: Armchair,
+  Cerimônia: Heart,
+  Aniversários: PartyPopper,
+  "Eventos corporativos": BriefcaseBusiness,
+} satisfies Record<(typeof site.services)[number]["title"], LucideIcon>;
 
 function getHeroImage() {
   const image = casamentoJessicaRenanImages.find(
@@ -63,6 +82,63 @@ export default function Home() {
               Conteúdo institucional em aprovação.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="services section-space" id="servicos" aria-labelledby="servicos-title">
+        <div className="page-shell">
+          <div className="services__heading">
+            <div>
+              <p className="eyebrow services__eyebrow">Serviços</p>
+              <h2 className="heading-2 services__title" id="servicos-title">
+                Cada detalhe encontra o seu lugar.
+              </h2>
+            </div>
+            <p className="services__intro">
+              Da primeira ideia à composição final, criamos cenários que fazem
+              a celebração ser lembrada.
+            </p>
+          </div>
+
+          <ul className="services__grid">
+            {site.services.map((service) => {
+              const Icon = serviceIcons[service.title];
+
+              return (
+                <li className="service-card" key={service.title}>
+                  <Icon aria-hidden="true" className="service-card__icon" />
+                  <h3 className="heading-3 service-card__title">
+                    {service.title}
+                  </h3>
+                  <p>{service.description}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+
+      <section className="process section-space" aria-labelledby="processo-title">
+        <div className="page-shell">
+          <div className="process__heading">
+            <p className="eyebrow">Como acontece</p>
+            <h2 className="heading-2 mt-4" id="processo-title">
+              Um caminho leve, do sonho ao cenário.
+            </h2>
+          </div>
+          <ol className="process__steps">
+            {site.process.map((item) => (
+              <li className="process__step" key={item.step}>
+                <span className="process__number" aria-hidden="true">
+                  {item.step}
+                </span>
+                <div>
+                  <h3 className="heading-3">{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
     </>
