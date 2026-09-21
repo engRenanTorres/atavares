@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
+import { JavaScriptEnabled } from "@/components/layout/javascript-enabled";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { QuoteModalProvider } from "@/components/quote/quote-modal";
@@ -29,11 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${playfairDisplay.variable} ${lato.variable}`}
     >
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
-          }}
-        />
+        <JavaScriptEnabled />
         <a className="skip-link" href="#main-content">
           Pular para o conteúdo
         </a>

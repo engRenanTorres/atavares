@@ -23,30 +23,44 @@ export const site = {
       title: "Decoração completa",
       description:
         "Composição visual pensada para dar unidade à celebração.",
+      details:
+        "Uma proposta integrada para que cerimônia, recepção e todos os detalhes conversem entre si em um único cenário.",
     },
     {
       title: "Decoração floral",
       description: "Flores e folhagens que traduzem a atmosfera do evento.",
+      details:
+        "Composições florais desenvolvidas a partir da paleta, da estação e da atmosfera desejada para a sua celebração.",
     },
     {
       title: "Mesa de doces",
       description: "Detalhes que tornam a mesa um ponto alto da recepção.",
+      details:
+        "Uma composição que valoriza doces, bolo e peças decorativas como parte central da experiência dos convidados.",
     },
     {
       title: "Locação",
       description: "Peças selecionadas para completar cada cenário.",
+      details:
+        "Mobiliário e objetos decorativos escolhidos para complementar a composição e trazer coerência a cada ambiente.",
     },
     {
       title: "Cerimônia",
       description: "Um ambiente especial para o início de uma nova história.",
+      details:
+        "Um espaço pensado para acolher os momentos mais importantes da cerimônia com beleza, presença e personalidade.",
     },
     {
       title: "Aniversários",
       description: "Celebrações autorais para marcar momentos importantes.",
+      details:
+        "Ambientações personalizadas para celebrar fases, encontros e memórias importantes de forma especial.",
     },
     {
       title: "Eventos corporativos",
       description: "Ambientações cuidadosas para encontros profissionais.",
+      details:
+        "Composições que apoiam encontros profissionais, lançamentos e celebrações de equipes com atenção ao contexto da marca.",
     },
   ],
   process: [

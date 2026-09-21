@@ -58,12 +58,12 @@
 
 ## Fase C — Páginas Complementares
 
-### Task 9 — Galeria `/portfolio` + lightbox 🔶
+### Task 9 — Galeria `/portfolio` + lightbox ✅
 - **Dep:** Tasks 2 e 7
 - **Escopo:** `content/portfolio.ts` tipado, grid editorial, filtros por categoria, lightbox acessível (teclado, `alt` contextual).
 - **Entrega revisável:** galeria completa do Casamento Jéssica e Renan.
 
-### Task 10 — `/servicos` e `/sobre` 🔲
+### Task 10 — `/servicos` e `/sobre` ✅
 - **Dep:** Task 6
 - **Escopo:** detalhamento dos serviços; página institucional com história (texto pendente sinalizado) e processo expandido.
 - **Entrega revisável:** duas rotas completas.

@@ -7,9 +7,9 @@ import { site } from "@/content/site";
 import { QuoteTrigger } from "@/components/quote/quote-modal";
 
 const navigation = [
-  { href: "/#sobre", label: "Sobre" },
-  { href: "/#servicos", label: "Serviços" },
-  { href: "/#portfolio", label: "Portfólio" },
+  { href: "/sobre", label: "Sobre" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/portfolio", label: "Portfólio" },
 ] as const;
 
 export function SiteHeader() {

@@ -27,7 +27,7 @@ export function SiteFooter() {
         </nav>
 
         <p className="site-footer__copyright">
-          © {new Date().getFullYear()} {site.brand.name}
+          © {site.brand.name}
         </p>
       </div>
     </footer>
