@@ -32,6 +32,7 @@ const initialFormData: QuoteFormData = {
   location: "",
   guestCount: "",
   details: "",
+  privacyAccepted: false,
 };
 
 export function QuoteModalProvider({ children }: { children: ReactNode }) {
@@ -100,7 +101,6 @@ function QuoteModal({
   const dialogRef = useRef<HTMLDivElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState(initialFormData);
-  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [error, setError] = useState("");
   const titleId = useId();
   const descriptionId = useId();
@@ -160,7 +160,7 @@ function QuoteModal({
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!formData.name.trim() || !privacyAccepted) {
+    if (!formData.name.trim() || !formData.privacyAccepted) {
       setError(
         "Informe seu nome e aceite a política de privacidade para continuar.",
       );
@@ -218,6 +218,8 @@ function QuoteModal({
           <div className="quote-form__field">
             <label htmlFor="quote-name">Seu nome</label>
             <input
+              aria-describedby={error ? errorId : undefined}
+              aria-invalid={error && !formData.name.trim() ? true : undefined}
               autoComplete="name"
               id="quote-name"
               onChange={(event) => updateField("name", event.target.value)}
@@ -296,8 +298,14 @@ function QuoteModal({
 
           <label className="quote-form__privacy">
             <input
-              checked={privacyAccepted}
-              onChange={(event) => setPrivacyAccepted(event.target.checked)}
+              aria-describedby={error ? errorId : undefined}
+              aria-invalid={
+                error && !formData.privacyAccepted ? true : undefined
+              }
+              checked={formData.privacyAccepted}
+              onChange={(event) =>
+                updateField("privacyAccepted", event.target.checked)
+              }
               required
               type="checkbox"
             />

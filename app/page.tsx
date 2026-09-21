@@ -16,6 +16,7 @@ import {
 } from "@/content/portfolio-images";
 import { site } from "@/content/site";
 import { QuoteTrigger } from "@/components/quote/quote-modal";
+import { Reveal } from "@/components/sections/reveal";
 import Link from "next/link";
 
 const serviceIcons = {
@@ -82,7 +83,7 @@ export default function Home() {
       </section>
 
       <section className="introduction section-space" id="sobre" aria-labelledby="sobre-title">
-        <div className="page-shell introduction__grid">
+        <Reveal className="page-shell introduction__grid">
           <div>
             <p className="eyebrow">AZ Tavares Eventos</p>
             <h2 className="heading-2 mt-4" id="sobre-title">
@@ -99,11 +100,11 @@ export default function Home() {
               Conteúdo institucional em aprovação.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="services section-space" id="servicos" aria-labelledby="servicos-title">
-        <div className="page-shell">
+        <Reveal className="page-shell">
           <div className="services__heading">
             <div>
               <p className="eyebrow services__eyebrow">Serviços</p>
@@ -132,11 +133,11 @@ export default function Home() {
               );
             })}
           </ul>
-        </div>
+        </Reveal>
       </section>
 
       <section className="process section-space" aria-labelledby="processo-title">
-        <div className="page-shell">
+        <Reveal className="page-shell">
           <div className="process__heading">
             <p className="eyebrow">Como acontece</p>
             <h2 className="heading-2 mt-4" id="processo-title">
@@ -156,7 +157,7 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
+        </Reveal>
       </section>
 
       <section
@@ -164,7 +165,7 @@ export default function Home() {
         id="portfolio"
         aria-labelledby="portfolio-title"
       >
-        <div className="page-shell">
+        <Reveal className="page-shell">
           <div className="portfolio__heading">
             <div>
               <p className="eyebrow portfolio__eyebrow">Portfólio</p>
@@ -203,11 +204,11 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </section>
 
       <section className="faq section-space" aria-labelledby="faq-title">
-        <div className="page-shell faq__layout">
+        <Reveal className="page-shell faq__layout">
           <div>
             <p className="eyebrow">Perguntas frequentes</p>
             <h2 className="heading-2 mt-4" id="faq-title">
@@ -222,11 +223,11 @@ export default function Home() {
               </details>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="final-cta section-space" aria-labelledby="cta-title">
-        <div className="page-shell final-cta__content">
+        <Reveal className="page-shell final-cta__content">
           <p className="eyebrow final-cta__eyebrow">{site.location}</p>
           <h2 className="heading-2 final-cta__title" id="cta-title">
             Sua celebração começa com uma boa conversa.
@@ -237,7 +238,7 @@ export default function Home() {
           <QuoteTrigger className="button button--primary">
             {site.cta.quote}
           </QuoteTrigger>
-        </div>
+        </Reveal>
       </section>
     </>
   );

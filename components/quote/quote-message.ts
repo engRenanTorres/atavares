@@ -7,6 +7,7 @@ export type QuoteFormData = {
   location: string;
   guestCount: string;
   details: string;
+  privacyAccepted: boolean;
 };
 
 function valueOrNotProvided(value: string) {

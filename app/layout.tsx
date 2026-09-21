@@ -29,6 +29,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${playfairDisplay.variable} ${lato.variable}`}
     >
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <a className="skip-link" href="#main-content">
           Pular para o conteúdo
         </a>

@@ -807,6 +807,17 @@ a[href] {
   width: 100%;
 }
 
+[data-reveal] {
+  transition:
+    opacity 350ms ease-out,
+    transform 350ms ease-out;
+}
+
+.js [data-reveal]:not([data-visible="true"]) {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
 .token-divider {
   width: 100%;
   height: 1px;
@@ -971,6 +982,12 @@ a[href] {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
   *,
