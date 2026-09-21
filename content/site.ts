@@ -83,6 +83,21 @@ export const site = {
         "Cuidamos da montagem para que você possa aproveitar cada momento.",
     },
   ],
+  testimonials: {
+    enabled: true,
+    items: [
+      {
+        quote:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A decoração trouxe delicadeza e acolhimento para cada momento da celebração.",
+        author: "Depoimento em aprovação",
+      },
+      {
+        quote:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cada detalhe foi pensado com cuidado para criar um cenário especial.",
+        author: "Depoimento em aprovação",
+      },
+    ],
+  },
   faqs: [
     {
       question: "Quais regiões vocês atendem?",

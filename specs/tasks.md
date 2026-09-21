@@ -68,7 +68,7 @@
 - **Escopo:** detalhamento dos serviços; página institucional com história (texto pendente sinalizado) e processo expandido.
 - **Entrega revisável:** duas rotas completas.
 
-### Task 11 — Depoimentos (placeholder) + política de privacidade 🔲
+### Task 11 — Depoimentos (placeholder) + política de privacidade ✅
 - **Dep:** Task 8
 - **Escopo:** componente de depoimentos com Lorem Ipsum e flag para ocultar; página de privacidade explicando uso local dos dados do formulário.
 - **Entrega revisável:** seção e rota completas.

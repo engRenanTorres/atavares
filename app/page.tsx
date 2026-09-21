@@ -17,6 +17,7 @@ import {
 import { site } from "@/content/site";
 import { QuoteTrigger } from "@/components/quote/quote-modal";
 import { Reveal } from "@/components/sections/reveal";
+import { Testimonials } from "@/components/sections/testimonials";
 import Link from "next/link";
 
 const serviceIcons = {
@@ -225,6 +226,8 @@ export default function Home() {
           </div>
         </Reveal>
       </section>
+
+      <Testimonials />
 
       <section className="final-cta section-space" aria-labelledby="cta-title">
         <Reveal className="page-shell final-cta__content">
