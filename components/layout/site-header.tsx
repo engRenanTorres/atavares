@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useId, useState } from "react";
 
 import { site } from "@/content/site";
+import { QuoteTrigger } from "@/components/quote/quote-modal";
 
 const navigation = [
   { href: "/#sobre", label: "Sobre" },
@@ -84,13 +85,12 @@ export function SiteHeader() {
                 </li>
               ))}
             </ul>
-            <a
+            <QuoteTrigger
               className="button button--primary site-header__cta"
-              href={site.contact.whatsappUrl}
               onClick={closeMenu}
             >
               {site.cta.quote}
-            </a>
+            </QuoteTrigger>
           </div>
         </nav>
       </div>

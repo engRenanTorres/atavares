@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { site } from "@/content/site";
+import { QuoteTrigger } from "@/components/quote/quote-modal";
 
 export function SiteFooter() {
   return (
@@ -14,7 +15,7 @@ export function SiteFooter() {
         </div>
 
         <nav className="site-footer__navigation" aria-label="Links institucionais">
-          <a href={site.contact.whatsappUrl}>{site.cta.whatsapp}</a>
+          <QuoteTrigger>{site.cta.whatsapp}</QuoteTrigger>
           <a
             href={site.contact.instagramUrl}
             rel="noreferrer"

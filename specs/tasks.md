@@ -40,18 +40,18 @@
 - **Escopo:** hero com foto de impacto aprovada, frase de valor, overline "Niterói e região", CTA; bloco institucional com texto pendente sinalizado.
 - **Entrega revisável:** primeira dobra completa da home.
 
-### Task 6 — Serviços + Processo 🔶
+### Task 6 — Serviços + Processo ✅
 - **Dep:** Task 4
 - **Escopo:** cards dos 7 serviços com ícones Lucide; seção de processo em 3 etapas.
 - **Entrega revisável:** duas seções completas na home.
 
-### Task 7 — Modal de orçamento → WhatsApp 🔲
+### Task 7 — Modal de orçamento → WhatsApp ✅
 - **Dep:** Task 4
 - **Escopo:** modal acessível (focus trap, `Escape`, retorno de foco), formulário com validação, função pura geradora da mensagem, `encodeURIComponent`, fallback sem JS. Substituir todos os CTAs para abrir o modal.
 - **Entrega revisável:** fluxo completo: CTA → formulário → WhatsApp com mensagem montada conforme modelo de `mvp-produto.md` §6.
 - **Teste manual obrigatório:** mensagem recebida no número real com campos preenchidos e "não informado" nos opcionais vazios.
 
-### Task 8 — Portfólio em destaque + FAQ + CTA final na home 🔲
+### Task 8 — Portfólio em destaque + FAQ + CTA final na home ✅
 - **Dep:** Tasks 2, 6 e 7
 - **Escopo:** seleção curada 6–8 fotos aprovadas na Task 2 com link para `/portfolio`; FAQ com conteúdo confirmado; CTA final em seção escura.
 - **Entrega revisável:** home completa de ponta a ponta.

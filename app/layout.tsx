@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { QuoteModalProvider } from "@/components/quote/quote-modal";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -31,9 +32,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a className="skip-link" href="#main-content">
           Pular para o conteúdo
         </a>
-        <SiteHeader />
-        <main id="main-content">{children}</main>
-        <SiteFooter />
+        <QuoteModalProvider>
+          <SiteHeader />
+          <main id="main-content">{children}</main>
+          <SiteFooter />
+        </QuoteModalProvider>
       </body>
     </html>
   );

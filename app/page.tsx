@@ -9,8 +9,14 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import { heroImageId, casamentoJessicaRenanImages } from "@/content/portfolio-images";
+import {
+  heroImageId,
+  homeHighlightImageIds,
+  casamentoJessicaRenanImages,
+} from "@/content/portfolio-images";
 import { site } from "@/content/site";
+import { QuoteTrigger } from "@/components/quote/quote-modal";
+import Link from "next/link";
 
 const serviceIcons = {
   "Decoração completa": Flower2,
@@ -36,6 +42,17 @@ function getHeroImage() {
 
 export default function Home() {
   const heroImage = getHeroImage();
+  const highlightImages = homeHighlightImageIds
+    .filter((id) => id !== heroImageId)
+    .map((id) => {
+      const image = casamentoJessicaRenanImages.find((item) => item.id === id);
+
+      if (!image) {
+        throw new Error(`A imagem em destaque "${id}" não foi encontrada.`);
+      }
+
+      return image;
+    });
 
   return (
     <>
@@ -58,9 +75,9 @@ export default function Home() {
             Transformamos celebrações em cenários memoráveis, pensados para
             acolher cada momento especial.
           </p>
-          <a className="button button--primary" href={site.contact.whatsappUrl}>
+          <QuoteTrigger className="button button--primary">
             {site.cta.quote}
-          </a>
+          </QuoteTrigger>
         </div>
       </section>
 
@@ -139,6 +156,87 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section
+        className="portfolio section-space"
+        id="portfolio"
+        aria-labelledby="portfolio-title"
+      >
+        <div className="page-shell">
+          <div className="portfolio__heading">
+            <div>
+              <p className="eyebrow portfolio__eyebrow">Portfólio</p>
+              <h2 className="heading-2 portfolio__title" id="portfolio-title">
+                Casamento Jéssica e Renan.
+              </h2>
+            </div>
+            <div className="portfolio__intro">
+              <p>
+                Uma celebração em tons quentes, com flores, mesa de doces,
+                bolo e velas. Texto curatorial temporário até a confirmação
+                do conteúdo do evento.
+              </p>
+              <Link className="button button--secondary" href="/portfolio">
+                {site.cta.portfolio}
+              </Link>
+            </div>
+          </div>
+
+          <ul className="portfolio__grid">
+            {highlightImages.map((image) => (
+              <li
+                className={`portfolio__item${
+                  image.height > image.width ? " portfolio__item--portrait" : ""
+                }`}
+                key={image.id}
+              >
+                <Image
+                  alt={image.alt}
+                  className="portfolio__image"
+                  height={image.height}
+                  sizes="(min-width: 48rem) 66vw, 100vw"
+                  src={image.src}
+                  width={image.width}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="faq section-space" aria-labelledby="faq-title">
+        <div className="page-shell faq__layout">
+          <div>
+            <p className="eyebrow">Perguntas frequentes</p>
+            <h2 className="heading-2 mt-4" id="faq-title">
+              O que você precisa saber.
+            </h2>
+          </div>
+          <div className="faq__list">
+            {site.faqs.map((faq) => (
+              <details className="faq__item" key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="final-cta section-space" aria-labelledby="cta-title">
+        <div className="page-shell final-cta__content">
+          <p className="eyebrow final-cta__eyebrow">{site.location}</p>
+          <h2 className="heading-2 final-cta__title" id="cta-title">
+            Sua celebração começa com uma boa conversa.
+          </h2>
+          <p className="final-cta__description">
+            Conte a sua ideia e receba uma proposta pensada para o seu evento.
+          </p>
+          <QuoteTrigger className="button button--primary">
+            {site.cta.quote}
+          </QuoteTrigger>
         </div>
       </section>
     </>
